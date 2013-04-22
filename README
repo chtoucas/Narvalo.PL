@@ -1,0 +1,33 @@
+A Perl library for Pine
+=======================
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module only requires one module not already available
+in the standard Perl 5.8 distribution:
+
+  File::Spec		# Cross-platform file names operations
+
+However, if you wish to use the pinestats script, you will need to install:
+
+  Tie::IxHash		# Ordered associative arrays
+  Email::Address	# RFC 2822 address
+  MIME::Words		# RFC 1522 encoded words
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2003-2005 Tran Ngoc Bich
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 
+

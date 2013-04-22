@@ -1,0 +1,10 @@
+---
+working_dir:    /home/merlyn/work
+geo:
+    subdir:     geo
+    type_map:
+        france2009.txt:     cities
+        depts2009.txt:      departments
+        reg2009.txt:        regions
+        ZIPCODES.txt:       zipcodes
+        GEOPOINTS.txt:      geopoints

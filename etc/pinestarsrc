@@ -1,0 +1,2 @@
+excludes={Sent}, {Mail}sent, {Mail}postponed, {Mail}spam
+blackholes={Mail}backup

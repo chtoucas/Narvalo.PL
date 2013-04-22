@@ -1,0 +1,9 @@
+Revision history for Perl extension Mail::Pine.
+
+0.16  Sat  1 Jan 2005 11:35:13 CET
+ - First stable version for Pinerc.pm
+
+0.01  Sat Feb 15 09:56:14 2003
+ - Original version; created by h2xs 1.22 with options
+    -A -X -n Mail::Pine
+

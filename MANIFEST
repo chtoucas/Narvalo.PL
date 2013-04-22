@@ -1,0 +1,10 @@
+Changes
+lib/Mail/Pine.pm
+lib/Mail/Pine/Pinerc.pm
+lib/Mail/Pine/Pinerc/Option.pm
+Makefile.PL
+MANIFEST
+META.yml			Module meta-data (added by MakeMaker)
+README
+t/01-pinerc.t
+t/pinerc
