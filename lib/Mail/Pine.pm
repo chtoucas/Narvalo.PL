@@ -44,11 +44,11 @@ The Pine man page
 
 =head1 AUTHOR
 
-Tran Ngoc Bich, E<lt>chtoucas (at) free (dot) frE<gt>
+Chtoucas, E<lt>chtoucas (at) narvalo (dot) orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003-2006 by Tran Ngoc Bich
+Copyright 2003-2006 by Chtoucas
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

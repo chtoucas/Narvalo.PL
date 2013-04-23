@@ -32,7 +32,7 @@ WriteMakefile(
         $] >= 5.005 ?
         (
             ABSTRACT_FROM => 'lib/Mail/Pine.pm',
-            AUTHOR => 'Tran Ngoc Bich <chtoucas (at) narvalo (dot) org>'
+            AUTHOR => 'Chtoucas <chtoucas (at) narvalo (dot) org>'
         ) :
         ()
     ),
