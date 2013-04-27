@@ -6,7 +6,8 @@ use warnings;
 
 use version;
 
-our $VERSION = q{0.1};
+our $VERSION = q{1.0};
 
 1;
+
 __END__

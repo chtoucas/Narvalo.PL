@@ -1,8 +1,3 @@
-# TODO:
-# - If no data to display?
-# - In-house SVG tool
-# - JavaScript integration
-
 $|++;
 
 use strict;
@@ -20,10 +15,10 @@ use utf8;
 use Cwd                         qw(getcwd);
 use DateTime;
 use Getopt::Std                 qw(getopts);
-use Narvalo::Bookkeeping::Transactions::All;
+use Narvalo::Bookkeeping::Transactions;
 use Narvalo::Bookkeeping::Utils qw(:ALL);
-use Narvalo::Bookkeeping::SVG::TimeSeries;
 use Time::Local;
+use SVG::TT::Graph::TimeSeries;
 
 binmode(STDOUT, ':utf8');
 
@@ -243,8 +238,7 @@ MAIN:
         = "Min: " . sprintf("%.2f", $min_balance) . qq{ \N{EURO SIGN} / Max: }
         . sprintf("%.2f", $max_balance) . qq{ \N{EURO SIGN}};
 
-    my $graph = Narvalo::Bookkeeping::SVG::TimeSeries->new({
-        'style_sheet'       => 'css/timeseries.css',
+    my $graph = SVG::TT::Graph::TimeSeries->new({
         'rollover_values'   => 1,
         'area_fill'         => 1,
         'height'            => $height,
@@ -278,7 +272,6 @@ MAIN:
     }
 
     print $graph->burn();
-
 }
 
 ################################################################################
@@ -302,12 +295,12 @@ sub get_dates {
 
 sub parse_xml {
     my($xml, $end, $type) = @_;
-    $xml ||= 'xml/soldi.xml';
+    $xml ||= 'book.xml';
     die qq{Missing input file '$xml'} unless -f $xml;
 
     # Parse the file
     # XXX Add filter on iban
-    my $parser = Narvalo::Bookkeeping::Transactions::All->new();
+    my $parser = Narvalo::Bookkeeping::Transactions->new();
     $parser->parse($xml, {end_ymd => $end, type => $type ? 'CASH' : undef,});
 
     return $parser->banks();

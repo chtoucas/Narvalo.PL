@@ -1,4 +1,4 @@
-package Narvalo::Bookkeeping::Transactions::All;
+package Narvalo::Bookkeeping::Transactions;
 
 use strict;
 use warnings;

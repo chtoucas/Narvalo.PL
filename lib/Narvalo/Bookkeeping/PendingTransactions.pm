@@ -1,4 +1,4 @@
-package Narvalo::Bookkeeping::Transactions::NotCleared;
+package Narvalo::Bookkeeping::PendingTransactions;
 
 use strict;
 use warnings;

@@ -13,7 +13,7 @@ BEGIN {
 use DateTime;
 use Getopt::Std                     qw(getopts);
 use Narvalo::Bookkeeping::Utils     qw(ymd_is_wellformed);
-use Narvalo::Bookkeeping::Transactions::NotCleared;
+use Narvalo::Bookkeeping::PendingTransactions;
 
 binmode(STDOUT, ':utf8');
 
@@ -25,7 +25,7 @@ MAIN:
     unless getopts('e:t:f:', \%opts);
 
     my $xml = $opts{f};
-    $xml ||= 'xml/soldi.xml';
+    $xml ||= 'book.xml';
     die "Missing input file $xml" unless -f $xml;
 
     my $type = $opts{t} if $opts{t};
@@ -42,7 +42,7 @@ MAIN:
     }
 
     #
-    my $transactions = Narvalo::Bookkeeping::Transactions::NotCleared->new();
+    my $transactions = Narvalo::Bookkeeping::PendingTransactions->new();
     $transactions->parse($xml, {type => $type, end_ymd => $end_ymd});
     my %transactions = %{ $transactions->result() };
 
