@@ -11,9 +11,9 @@ BEGIN {
 }
 
 use DateTime;
-use Getopt::Std     qw(getopts);
-use Soldi::Transactions::NotCleared;
-use Soldi::Utils    qw(ymd_is_wellformed);
+use Getopt::Std                     qw(getopts);
+use Narvalo::Bookkeeping::Utils     qw(ymd_is_wellformed);
+use Narvalo::Bookkeeping::Transactions::NotCleared;
 
 binmode(STDOUT, ':utf8');
 
@@ -42,7 +42,7 @@ MAIN:
     }
 
     #
-    my $transactions = Soldi::Transactions::NotCleared->new();
+    my $transactions = Narvalo::Bookkeeping::Transactions::NotCleared->new();
     $transactions->parse($xml, {type => $type, end_ymd => $end_ymd});
     my %transactions = %{ $transactions->result() };
 

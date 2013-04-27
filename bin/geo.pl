@@ -7,6 +7,7 @@ BEGIN {
     use FindBin     qw($Bin);
     use lib         qq{$Bin/../lib};
 }
+
 binmode(STDOUT, ':utf8');
 
 use File::Spec::Functions   qw(catfile);

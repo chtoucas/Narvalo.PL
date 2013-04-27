@@ -1,4 +1,4 @@
-package Soldi::Transactions::All;
+package Narvalo::Bookkeeping::Transactions::All;
 
 use strict;
 use warnings;
@@ -6,7 +6,7 @@ use feature     qw(switch);
 use utf8;
 
 use Carp;
-use Soldi::Utils                qw(is_after is_before);
+use Narvalo::Bookkeeping::Utils     qw(is_after is_before);
 use XML::SAX::ParserFactory;
 {
     sub new {

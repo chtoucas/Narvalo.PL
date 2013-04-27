@@ -1,4 +1,4 @@
-package Soldi::Utils;
+package Narvalo::Bookkeeping::Utils;
 
 use strict;
 use warnings;

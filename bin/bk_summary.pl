@@ -12,8 +12,8 @@ BEGIN {
 
 use DateTime;
 use Getopt::Std                 qw(getopts);
-use Soldi::Transactions::All;
-use Soldi::Utils                qw(ymd_is_wellformed);
+use Narvalo::Bookkeeping::Utils qw(ymd_is_wellformed);
+use Narvalo::Bookkeeping::Transactions::All;
 
 binmode(STDOUT, ':utf8');
 
@@ -39,7 +39,7 @@ MAIN:
     }
 
     #
-    my $parser = Soldi::Transactions::All->new();
+    my $parser = Narvalo::Bookkeeping::Transactions::All->new();
     $parser->parse($xml, {'end_ymd' => $end_ymd});
     my $banks = $parser->banks();
 
