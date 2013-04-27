@@ -1,9 +1,13 @@
-Revision history for Perl extension Mail::Pine.
+Revision history for my Perl utilities.
 
-0.16  Sat  1 Jan 2005 11:35:13 CET
+1.0   Sat 28 Apr 2013
+ - Nothing much except that now it's on GitHub. Since I no longer
+   work with Perl for years, I do not expect to write anything new.
+
+0.16  Sat  1 Jan 2005
  - First stable version for Pinerc.pm
 
-0.01  Sat Feb 15 09:56:14 2003
+0.01  Sat Feb 15 2003
  - Original version; created by h2xs 1.22 with options
     -A -X -n Mail::Pine
 
