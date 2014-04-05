@@ -393,8 +393,8 @@ sub get_scales {
         when ('YEARS') {
             $x_label_format = '%Y';
             $timescale_divisions = '1 years';
-            $height = 650;
-            $width = 1200;
+            $height = 750;
+            $width = 1550;
             $show_data_points = 0;
         }
         when ('MONTHS') {
@@ -410,14 +410,14 @@ sub get_scales {
             }
 
             $show_data_points = 1;
-            $height = 650;
-            $width = 1200;
+            $height = 750;
+            $width = 1550;
         }
         when ('DAYS') {
             $x_label_format = '%d';
             $timescale_divisions = '1 days';
-            $height = 650;
-            $width = 1200;
+            $height = 750;
+            $width = 1550;
             $show_data_points = 1;
         }
     }
@@ -486,7 +486,7 @@ sub _get_scales {
                 x_range     => '1 years',
                 show_points => 0,
                 height      => 750,
-                width       => 1200,
+                width       => 1550,
             );
         }
         when ('MONTHS') {
@@ -502,7 +502,7 @@ sub _get_scales {
             }
             $scales{show_data_points} = 1;
             $scales{height} = 750;
-            $scales{width} = 1200;
+            $scales{width} = 1550;
         }
         when ('DAYS') {
             # < 1 month
@@ -513,7 +513,7 @@ sub _get_scales {
                 x_range     => '1 days',
                 show_points => 1,
                 height      => 750,
-                width       => 1200,
+                width       => 1550,
             );
         }
     }
